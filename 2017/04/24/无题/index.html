@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        集成运放非线性应用及其在波形产生方面的实验｜Fabre Li
+        无题｜Fabre Li
         
     </title>
 
-    <link rel="canonical" href="http://fabre-li.com/2017/04/21/实验/集成运放非线性应用及其在波形产生方面的实验/">
+    <link rel="canonical" href="http://fabre-li.com/2017/04/24/无题/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -135,13 +135,13 @@
 <!--only post-->
 
 
-<img class="wechat-title-img" src="https://ooo.0o0.ooo/2017/04/14/58f07e9d4a1fc.jpg">
+<img class="wechat-title-img" src="https://ooo.0o0.ooo/2017/04/24/58fe0333354da.jpg">
 
 
 <style>
     
     header.intro-header {
-        background-image: url('https://ooo.0o0.ooo/2017/04/14/58f07e9d4a1fc.jpg');
+        background-image: url('https://ooo.0o0.ooo/2017/04/24/58fe0333354da.jpg');
     }
 
     
@@ -152,21 +152,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>集成运放非线性应用及其在波形产生方面的实验</h1>
+                    <h1>无题</h1>
                     
                     <span class="meta">
                          作者 Fabre Li
                         <span>
-                          日期 2017-04-21
+                          日期 2017-04-24
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#现代电子线路和技术实验"
-                           title="现代电子线路和技术实验">现代电子线路和技术实验</a>
-                        
-                        <a class="tag" href="/tags/#实验"
-                           title="实验">实验</a>
+                        <a class="tag" href="/tags/#日常"
+                           title="日常">日常</a>
                         
                     </div>
                 </div>
@@ -175,7 +172,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            集成运放非线性应用及其在波形产生方面的实验
+            无题
         </span>
     </div>
 </header>
@@ -186,16 +183,39 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>在模拟系统中，方波、三角波、正弦波、锯齿波等信号都可以用集成运放来事先。由于电路简单，频率和幅度易于调节，因而得到广泛的应用。其基本工作原理是根据振荡器的工作原理，采用正、负反馈相结合的方法，将一些线性和非线性原件与集成运放进行组合，构成不同波形产生电路。</p>
-<h1 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h1><p>学会用集成运算放大器事先波形变换及波形产生。</p>
-<h1 id="可提供的实验资源"><a href="#可提供的实验资源" class="headerlink" title="可提供的实验资源"></a>可提供的实验资源</h1><p>1.测量仪器<br>2.模拟电路通用实验板<br>3.电子线路实验箱（F007两只）<br>4.6V稳压二极管两只（2CW7E）</p>
-<h1 id="实验内容及要求"><a href="#实验内容及要求" class="headerlink" title="实验内容及要求"></a>实验内容及要求</h1><h2 id="拓展命题"><a href="#拓展命题" class="headerlink" title="拓展命题"></a>拓展命题</h2><p>设计一个双运放方波-三角波发生器，要求输出频率 $f_{0}=10 kH_{z} \pm 10\%$，三角波输出幅度 $U_{pp}$ 大于3V。</p>
-<h1 id="实验路线与策略"><a href="#实验路线与策略" class="headerlink" title="实验路线与策略"></a>实验路线与策略</h1><h2 id="拓展命题-1"><a href="#拓展命题-1" class="headerlink" title="拓展命题"></a>拓展命题</h2><p>方波-三角波发生器电路如下图所示。</p>
-<p><img src="https://ooo.0o0.ooo/2017/04/21/58f9f6c50ab9b.png" alt="方波-三角波发生器"></p>
-<p>运放 $A_{1}$ 构成迟滞比较器，运放 $A_{2}$ 构成积分器，其振荡频率为$$f_{0}=\frac{R_{2}}{4R_{P1}R_{P2}C}$$<br>二者形成闭环，构成一张弛振荡器，产生方波与三角波。三角波的频率可通过调 $R_{P2}$ 或改变电容 $C$ 来实现。<br>若要输出电压在某一范围内变化，可在运放 $A_{2}$ 输出端加一电位器，来调节三角波的输出电压。</p>
-<p>[注意]：<br>a.积分电阻 $R_{P2}$ 的值一定不要太大，因为 $R_{P2}$ 是前级的负载，$R_{P2}$ 太小，会超出前级的负载能力，震荡将不正常。<br>b.三角波或锯齿波的幅度可通过调节 $R_{1}$ 和 $R_{P1}$ 的比值来控制。<br>c.运算放大器带宽和速度对电路性能的影响。在前面的实验中，假设运算放大器是理想的，在一定的条件下，这是正确的。但是当工作频率升高，运算放大器的带宽和压摆率的限制将会显现出来。</p>
-<h1 id="实验电路与波形图"><a href="#实验电路与波形图" class="headerlink" title="实验电路与波形图"></a>实验电路与波形图</h1><p><img src="https://ooo.0o0.ooo/2017/04/21/58f9f6c53733b.png" alt="实验电路仿真图"></p>
-<p><img src="https://ooo.0o0.ooo/2017/04/21/58f9f6c520ddb.png" alt="模拟波形图"></p>
+                <h1 id="我真的不是大神啊"><a href="#我真的不是大神啊" class="headerlink" title="我真的不是大神啊"></a>我真的不是大神啊</h1><p>中午发了条和Google Analytics有关的朋友圈，突然间就被说大神了。</p>
+<p><img src="https://ooo.0o0.ooo/2017/04/24/58fe0343a9dc8.png" alt="朋友圈"></p>
+<p>我真的不是啊…</p>
+<p>大神个屁啊，一开始网站是陈老板帮忙搭的，我后来还一堆智障问题问他。所谓的Google Analytics就是注册个Google账号然后把网址丢上去再得到个ID就行了。</p>
+<p>就这样无缘无故说是大神解释了一通才解释过去…明明就是个菜鸡…</p>
+<p>[大神链接]<a href="https://terry.pub" style="color:inherit" target="_blank" rel="external">陈老板Terry Chan</a></p>
+<h1 id="人还是要当一方面的大神比较好"><a href="#人还是要当一方面的大神比较好" class="headerlink" title="人还是要当一方面的大神比较好"></a>人还是要当一方面的大神比较好</h1><p>想想我会什么。</p>
+<p>嗯我好像会很多东西啊。乒乓球和羽毛球以前都有练过打得还行，篮球以前很喜欢打不过现在好久没打了，最近喜欢打网球但还是水的不行，足球混了个校队，替补中的替补，训练也完全跟不上，桌球跟大佬平均5-6分钟打完一盘八球吧，没受过训练的同龄人中算比较好的？但反正离大神还差得很远。</p>
+<p>学习更加不用说，更加是菜，居然还被一个保研东南大学大学的学姐说是大神，真是羞愧。竞赛无论是数模还是电赛也是什么都不会，也没这个兴趣，就更加没打算用这暑假搞竞赛了。之前为了想搭自己的Blog学了HTML，还没学CSS就已经找了个主题陈老板帮我搭好了，然后HTML里学了的那些皮毛唯一的作用就是用markdown写Blog有些东西不知道怎么表达的时候就直接用HTML格式来写。最近在接触Linux，但是更加是初学者。</p>
+<p>其实我真的什么都不会啊…什么都会一点的另一种说法就是什么都不会啊。</p>
+<p>所以现在还是觉得，人还是要当一方面的大神比较好。</p>
+<p><strong>例如陈老板的编程和阿罩的撩妹</strong></p>
+<h1 id="训练练到吐了"><a href="#训练练到吐了" class="headerlink" title="训练练到吐了"></a>训练练到吐了</h1><p>校队训练大概停了两三周了吧，期间运动量也不大，除了体育课打打网球，只踢了几次野球，时间也不长。</p>
+<p>突然间一训练，本来跟他们的差距就大，现在更加是绝望。</p>
+<p>技术不用说了，体能也完全跟不上，练到中途突然一次没调整好呼吸，一口气卡住了开始干呕，硬生生把一小口呕吐物吞了回去继续练，踢到后面又开始脚软无力，各种失位被打爆。</p>
+<p>时常在怀疑，其实自己并没有校队的实力，就算是替补的替补也很难当得上，也不知道自己究竟还想不想留在校队。</p>
+<blockquote>
+<p>大部分时候，所谓生活的抉择，无非就是选择在一处古典悲剧里演一个执迷不悔的小丑，或是在一出肥皂剧里演一个愚蠢的没有悬念的英雄。——马良</p>
+</blockquote>
+<p>这学期的课本来都不怎么跟得上，信号与系统和模电真的学得怀疑人生，时不时要更一下Blog，还想抽时间学Linux。</p>
+<p>即使已经卸了屁股，但感觉时间还是不够用。</p>
+<p>最近还要准备中段考…</p>
+<p>可是问自己，是不是想退，又不想。</p>
+<p>可能是自尊心作怪吧，或许是心有不甘。</p>
+<p>觉得自己不至于这样就放弃，还没到要放弃的地步，或许再努力一下，再坚持一下，坚持一下，再一下，说不定就能撑过去了。</p>
+<p>可是为什么想留下来，为什么要留下来，该不该放弃，该不该留下来？</p>
+<p>谁又能告诉我…</p>
+<h1 id="好累-好想回来"><a href="#好累-好想回来" class="headerlink" title="好累 好想回来"></a>好累 好想回来</h1><p><img src="https://ooo.0o0.ooo/2017/04/24/58fe0358d11aa.png" alt="好累"></p>
+<p>突然好想吃普菲</p>
+<p>好想喝酥皮汤</p>
+<p>好想喝奶奶褒的老火汤</p>
+<p>好累 好想回家</p>
+<p><strong>我也想你了…想回来见你…</strong></p>
 
                 <hr>
                 
@@ -203,15 +223,10 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/04/18/time-stealer/" data-toggle="tooltip" data-placement="top"
-                           title="岁月神偷">&larr; Previous Post</a>
+                        <a href="/2017/04/21/实验/集成运放非线性应用及其在波形产生方面的实验/" data-toggle="tooltip" data-placement="top"
+                           title="集成运放非线性应用及其在波形产生方面的实验">&larr; Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/2017/04/24/无题/" data-toggle="tooltip" data-placement="top"
-                           title="无题">Next Post &rarr;</a>
-                    </li>
                     
                 </ul>
 
@@ -229,7 +244,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#实验目的"><span class="toc-text">实验目的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#可提供的实验资源"><span class="toc-text">可提供的实验资源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验内容及要求"><span class="toc-text">实验内容及要求</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#拓展命题"><span class="toc-text">拓展命题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验路线与策略"><span class="toc-text">实验路线与策略</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#拓展命题-1"><span class="toc-text">拓展命题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验电路与波形图"><span class="toc-text">实验电路与波形图</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#我真的不是大神啊"><span class="toc-text">我真的不是大神啊</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#人还是要当一方面的大神比较好"><span class="toc-text">人还是要当一方面的大神比较好</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#训练练到吐了"><span class="toc-text">训练练到吐了</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#好累-好想回来"><span class="toc-text">好累 好想回来</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -251,11 +266,8 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#现代电子线路和技术实验"
-                           title="现代电子线路和技术实验">现代电子线路和技术实验</a>
-                        
-                        <a class="tag" href="/tags/#实验"
-                           title="实验">实验</a>
+                        <a class="tag" href="/tags/#日常"
+                           title="日常">日常</a>
                         
                     </div>
                 </section>
@@ -288,8 +300,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "fabreli";
-    var disqus_identifier = "http://fabre-li.com/2017/04/21/实验/集成运放非线性应用及其在波形产生方面的实验/";
-    var disqus_url = "http://fabre-li.com/2017/04/21/实验/集成运放非线性应用及其在波形产生方面的实验/";
+    var disqus_identifier = "http://fabre-li.com/2017/04/24/无题/";
+    var disqus_url = "http://fabre-li.com/2017/04/24/无题/";
 
     (function () {
         var dsq = document.createElement('script');
