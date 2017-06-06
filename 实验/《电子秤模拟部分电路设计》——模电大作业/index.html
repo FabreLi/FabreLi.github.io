@@ -157,7 +157,7 @@
                     <span class="meta">
                          作者 Fabre Li
                         <span>
-                          日期 2017-06-03
+                          日期 2017-06-06
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -184,32 +184,47 @@
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
                 <p><strong>本实验报告为2016学年下学期1502061班级模拟电子电路及技术基础课程大作业。</strong><br><strong>本文仅作为记录以及参考，请勿直接使用文中任何图片及参数。</strong></p>
-<h1 id="实验任务"><a href="#实验任务" class="headerlink" title="实验任务"></a>实验任务</h1><p>完成电子秤模拟部分电路设计，电路总增益40~60dB可调，输入阻抗≥1兆欧，共模抑制比≥80dB，带宽：0Hz(DC)-20Hz；秤重范围0-50kg，分辨率0.1kg。</p>
-<h1 id="实验要求"><a href="#实验要求" class="headerlink" title="实验要求"></a>实验要求</h1><p>完成上述要求的模拟部分电路理论设计与虚拟仿真，记录压敏电阻阻值变化和输出电压的关系，并画出P-V曲线。</p>
-<h1 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h1><h2 id="压力传感器"><a href="#压力传感器" class="headerlink" title="压力传感器"></a>压力传感器</h2><p>压力传感器用4个电阻构成的直流平衡电桥等效，3个电阻固定为$380\Omega$，另一个电阻模拟压敏电阻（为了提高可变电阻阻值变化分辨率，用一个大电阻串联一个小可变电阻来实现），电桥直流驱动电压用电路正电源。测重时，压敏电阻阻值变化，平衡电桥产生差模输出电压。差模输出电压变化范围大致为为0-12mV。</p>
+<h2 id="实验任务"><a href="#实验任务" class="headerlink" title="实验任务"></a>实验任务</h2><p>完成电子秤模拟部分电路设计，电路总增益40~60dB可调，输入阻抗≥1兆欧，共模抑制比≥80dB，带宽：0Hz(DC)-20Hz；秤重范围0-50kg，分辨率0.1kg。</p>
+<h2 id="实验要求"><a href="#实验要求" class="headerlink" title="实验要求"></a>实验要求</h2><p>完成上述要求的模拟部分电路理论设计与虚拟仿真，记录压敏电阻阻值变化和输出电压的关系，并画出P-V曲线。</p>
+<h2 id="实验思路"><a href="#实验思路" class="headerlink" title="实验思路"></a>实验思路</h2><p>电路可分成三部分：压力传感器、放大器、滤波器。压力传感器通过压敏电阻阻值的变化改变差模输出电压，放大器将其放大并输出，滤波器消除共模干扰。信号经过单位转换之后得到符合要求的输出电压，再通过关系式将输出电压转换为质量，即可满足电子秤设计的量程要求。</p>
+<h2 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h2><h3 id="压力传感器"><a href="#压力传感器" class="headerlink" title="压力传感器"></a>压力传感器</h3><p>压力传感器用4个电阻构成的直流平衡电桥等效，3个电阻固定为$380\Omega$，另一个电阻模拟压敏电阻（为了提高可变电阻阻值变化分辨率，用一个大电阻串联一个小可变电阻来实现），电桥直流驱动电压用电路正电源。测重时，压敏电阻阻值变化，平衡电桥产生差模输出电压。差模输出电压变化范围大致为为0-12mV。</p>
 <p>设小可变电阻最大阻值为X，根据电压关系可得关系式：$$\frac{6.012}{12}=\frac{380+X}{760+X}$$</p>
 <p>求出 $X≈1.523\Omega$</p>
 <p>当可变电阻阻值取最大时，差模输出电压为12mV。</p>
 <p><img src="https://ooo.0o0.ooo/2017/06/03/593298e774f1b.png" alt="压力传感器.png"></p>
-<h2 id="放大器"><a href="#放大器" class="headerlink" title="放大器"></a>放大器</h2><p>调节放大器增益使输出电压范围为0-5V，输出电压经单位转换就可以现实重量，例如：1mV代表10g，则5V代表满量程50kg。建议输入级采用3运放构成的仪表放大器，运放可选用LM324、LM741、OP07等。</p>
-<p>仪表放大器增益为：$$\frac{V_{out}}{V_{1}-V_{2}}=(1+\frac{2R_{1}}{R_{g}})\frac{R_{3}}{R_{2}}$$</p>
-<p>将差模输出电压0-12mv放大至0-5V，则代入可得：$$\frac{5000}{12}=(1+\frac{2R_{1}}{R_{g}})\frac{R_{3}}{R_{2}}$$</p>
-<p>取：$$R_{1}=2M\Omega$$ $$R_{g}=1M\Omega$$ $$R_{2}=12k\Omega$$ $$R_{3}=1M\Omega$$</p>
+<h3 id="放大器"><a href="#放大器" class="headerlink" title="放大器"></a>放大器</h3><p>调节放大器增益使输出电压范围为0-5V，输出电压经单位转换就可以现实重量，例如：1mV代表10g，则5V代表满量程50kg。建议输入级采用3运放构成的仪表放大器，运放可选用LM324、LM741、OP07等。</p>
+<p>仪表放大器增益为：$$\frac{V<em>{out}}{V</em>{1}-V<em>{2}}=(1+\frac{2R</em>{1}}{R<em>{g}})\frac{R</em>{3}}{R_{2}}$$</p>
+<p>将差模输出电压0-12mv放大至0-5V，则代入可得：$$\frac{5000}{12}=(1+\frac{2R<em>{1}}{R</em>{g}})\frac{R<em>{3}}{R</em>{2}}$$</p>
+<p>取：</p>
+<p>$$R_{1}=2M\Omega$$ </p>
+<p>$$R_{g}=1M\Omega$$ </p>
+<p>$$R_{2}=12k\Omega$$ </p>
+<p>$$R_{3}=1M\Omega$$</p>
 <p><img src="https://ooo.0o0.ooo/2017/06/03/59329a14b932a.png" alt="放大器.png"></p>
+<p><strong>差模增益：</strong></p>
+<p><img src="https://ooo.0o0.ooo/2017/06/06/593661e906128.png" alt="差模增益.png"></p>
+<p>$$A_{ud}=\frac{4.166.3\times 10^{3}}{10}=416.63$$</p>
+<p><strong>共模增益：</strong></p>
+<p><img src="https://ooo.0o0.ooo/2017/06/06/593661e91c084.png" alt="共模增益.png"></p>
+<p>$$A_{uc}=\frac{0.0183}{2\times 10^{3}}=9.15\times 10^{-6}$$</p>
+<p><strong>共模抑制比：</strong></p>
+<p>$$K_{CMR}=|\frac{A_{ud}}{A_{uc}}|=\frac{416.63}{9.15\times 10^{-6}}=4.553\times 10^{7}$$</p>
 <p>将压力传感器和放大器连接起来。</p>
 <p><img src="https://ooo.0o0.ooo/2017/06/03/59329d4ad675a.png" alt="压力传感器+放大器.png"></p>
 <p>当可变电阻阻值取最大时，即差模输出电压为12mV时，放大器输出电压为5V。</p>
-<h2 id="滤波器"><a href="#滤波器" class="headerlink" title="滤波器"></a>滤波器</h2><p>设计二阶RC有源低通滤波器，根据实验要求，带宽在0-20Hz，满足宽带要求，并对50Hz工频干扰衰弱大于15dB。</p>
+<h3 id="滤波器"><a href="#滤波器" class="headerlink" title="滤波器"></a>滤波器</h3><p>设计二阶RC有源低通滤波器，根据实验要求，带宽在0-20Hz，满足宽带要求，并对50Hz工频干扰衰弱大于15dB。</p>
 <p>根据截止频率计算公式：$$f_{0}=\frac{1}{2\pi RC}$$</p>
-<p>取: $$R=1M\Omega$$ $$C=0.008\mu F$$</p>
+<p>取: </p>
+<p>$$R=1M\Omega$$</p>
+<p> $$C=0.008\mu F$$</p>
 <p><img src="https://ooo.0o0.ooo/2017/06/03/59329efb3b2df.png" alt="滤波器.png"></p>
 <p>由二阶低通滤波器的幅频特性可得，当频率为50Hz左右时，衰减大于15dB，因此，该滤波器满足条件。</p>
 <p><img src="https://ooo.0o0.ooo/2017/06/03/59329f67e94c8.png" alt="滤波器数据.png"></p>
-<h2 id="完整电路"><a href="#完整电路" class="headerlink" title="完整电路"></a>完整电路</h2><p>将上述三部分模块连接起来，得到完整电路。</p>
+<h3 id="完整电路"><a href="#完整电路" class="headerlink" title="完整电路"></a>完整电路</h3><p>将上述三部分模块连接起来，得到完整电路。</p>
 <p><img src="https://ooo.0o0.ooo/2017/06/03/5932a03a531c5.png" alt="完整电路"></p>
 <p>电路最大输出电压为5V。</p>
 <p><img src="https://ooo.0o0.ooo/2017/06/03/59329f75d5d64.png" alt="输出电压.png"></p>
-<h1 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h1><p>在实际的工作中，电桥电路中的压敏电阻阻值会随着重量不同而不同，产生不同的输出电压。因此，只要将输出电压与质量一一对应即可设计出实用的电子秤电路。</p>
+<h2 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h2><p>在实际的工作中，电桥电路中的压敏电阻阻值会随着重量不同而不同，产生不同的输出电压。因此，只要将输出电压与质量一一对应即可设计出实用的电子秤电路。</p>
 <p>压敏电阻百分比以及阻值对应的输出电压：</p>
 <table>
 <thead>
@@ -243,12 +258,12 @@
 <td style="text-align:center">0.07615</td>
 <td style="text-align:center">0.1523</td>
 <td style="text-align:center">0.22845</td>
-<td style="text-align:center">0.3046</td>
-<td style="text-align:center">0.38075</td>
-<td style="text-align:center">0.4569</td>
+<td style="text-align:center">0.304</td>
+<td style="text-align:center">0.3807</td>
+<td style="text-align:center">0.456</td>
 <td style="text-align:center">0.53305</td>
-<td style="text-align:center">0.6092</td>
-<td style="text-align:center">0.68535</td>
+<td style="text-align:center">0.609</td>
+<td style="text-align:center">0.6853</td>
 <td style="text-align:center">0.7615</td>
 <td style="text-align:center">0.83765</td>
 <td style="text-align:center">0.9138</td>
@@ -340,7 +355,7 @@
 </tbody>
 </table>
 <p><strong>质量-电压 关系曲线</strong></p>
-<p><img src="https://ooo.0o0.ooo/2017/06/03/5932b33dd30e4.png" alt="质量-电压关系曲线.png"></p>
+<p><img src="https://ooo.0o0.ooo/2017/06/03/5932b84e9905d.png" alt="质量-电压关系曲线.png"></p>
 <hr>
 <p>感谢刘亦鸣及其小组提供部分参考资料。</p>
 
@@ -350,15 +365,10 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/life/" data-toggle="tooltip" data-placement="top"
-                           title="生活中的碎碎念">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
                         <a href="/about-love/" data-toggle="tooltip" data-placement="top"
-                           title="关于喜欢你这件事">Next Post &rarr;</a>
+                           title="关于喜欢你这件事">&larr; Previous Post</a>
                     </li>
+                    
                     
                 </ul>
 
@@ -376,7 +386,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#实验任务"><span class="toc-text">实验任务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验要求"><span class="toc-text">实验要求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验过程"><span class="toc-text">实验过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#压力传感器"><span class="toc-text">压力传感器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#放大器"><span class="toc-text">放大器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#滤波器"><span class="toc-text">滤波器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完整电路"><span class="toc-text">完整电路</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据处理"><span class="toc-text">数据处理</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#实验任务"><span class="toc-text">实验任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实验要求"><span class="toc-text">实验要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实验思路"><span class="toc-text">实验思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实验过程"><span class="toc-text">实验过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#压力传感器"><span class="toc-text">压力传感器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#放大器"><span class="toc-text">放大器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#滤波器"><span class="toc-text">滤波器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#完整电路"><span class="toc-text">完整电路</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据处理"><span class="toc-text">数据处理</span></a></li></ol>
                 </div>
             </div>
         </div>
